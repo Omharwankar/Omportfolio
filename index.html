@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>om's portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="bgimg">
+        <div class="container">
+        <nav>
+            <img src="./imagesport/name.png" class="name" width="100px">
+            <ul>
+                <li><a href="#bgimg">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="main-text" id="home">
+       
+        <p>Frontend developer</p>
+        <h1>Hi,I'm <br><span>Om Harwankar</span></h1>
+
+    </div>
+    </div>
+    </div>
+    <div id="aboutme">
+        <div class="container">
+            <div class="row">
+            <div class="col-me-1">
+                <img src="./imagesport/aboutme.png" >
+            </div>
+            <div class="col-me-2">
+                <h1>About Me</h1>
+                <p>B.E Student.I consider myself a responsible and orderly person. <br>An organised deatail oriented and passionate engineer,who is able to <br> accomplis hmultiple task at ease ,without compromising on quality <br>I am looking forward for my first job and wanted to secure a challenging <br> position in a reputable organization  to expand my learning knowledge</p>
+                <div class="title">
+                   <p class="title-links active-links" onclick="opentab('skills')">Skills</p>
+                   <p class="title-links" onclick="opentab('experience')">Experience</p>
+                   <p class="title-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="content active-content"  id="skills">
+                    <ul>
+                        <li><span>Front end developer</span></li>
+                        <li><span>Python programming</span></li>
+                        <li><span>Computer networking</span></li>
+                    </ul>
+                </div>
+                <div class="content" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Internship at Trident Nariman Point</li>
+                        
+                    </ul>
+                </div>
+                <div class="content" id="education">
+                    <ul>
+                        <li><span>2023-persuing</span><br>Bachelor of Engineering in Electronics And Telecommunicatiom <br><b style="color: white;">Rajiv Gandhi Institute Of Technology</b></li>
+                        <li><span>2018-2020</span><br>HSC <br><b style="color: white;">Kishinchand Chellaram College</b></li>
+                        <li><span><br>2006-2018</span><br>SSC<b style="color: white;"> <br>St. Ignatius High School</b></li>
+                    </ul>
+        </div>
+
+    </div>
+    </div>
+    
+    <!-- portfolio -->
+    <div id="portfolio"></div>
+    <div class="container">
+        <h1 class="subt">My work</h1>
+        <div class="mywork">
+            <div class="work">
+                
+                 <img src="./imagesport/Screenshot 2023-11-29 225018.png"> 
+                 <!-- <map name="image_map">
+                  <area alt="Jobex" title="Jobex" href="../jobex/jobex.html" coords="2,4,370,836" shape="rect">
+                </map> -->
+                
+           
+                <div class="overwrite">
+                <h3>Job Profile App</h3>
+                <p>It is a social media app for jobs</p>
+                <a href="../jobex/jobex.html" target="_blank"><i class="fa fa-external-link"></i></a>
+
+                
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contactleft">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p>omhrvnkr@gmail.com</p>
+                    <p>Mob.no.:8291030795</p>
+                    <!-- <div class="socialicon">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div> -->
+                    <a href="OM cv.pdf" download="" class="download">Download CV</a>
+                   
+
+                </div>
+                <div class="contactright">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="submitbut">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy Om.</p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("active-links");
+        var tabcontents = document.getElementsByClassName("content");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-content");
+            }
+            event.currentTarget.classList.add("active-links")
+            document.getElementById(tabname).classList.add("active-content")
+        }   
+    </script>
+</body>
+</html>
