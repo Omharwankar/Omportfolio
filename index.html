@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>om's portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    
+        <div id="something"></div>
+        <div id="wide-div">
+        <div id="something-else"></div>
+    
     <div id="bgimg">
         <div class="container">
         <nav>
             <img src="./imagesport/name.png" class="name" width="100px">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#bgimg">Home</a></li>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-
+                <i class="fa fa-times"id=fas onclick="closemenu()"></i>
             </ul>
+            <i class="fa fa-bars"id=fa onclick="openmenu()"></i>
+
+        
         </nav>
         <div class="main-text" id="home">
        
@@ -36,7 +44,7 @@
             </div>
             <div class="col-me-2">
                 <h1>About Me</h1>
-                <p>B.E Student.I consider myself a responsible and orderly person. <br>An organised deatail oriented and passionate engineer,who is able to <br> accomplis hmultiple task at ease ,without compromising on quality <br>I am looking forward for my first job and wanted to secure a challenging <br> position in a reputable organization  to expand my learning knowledge</p>
+                <p class="abt">B.E Student.I consider myself a responsible and orderly person. <br>An organised deatail oriented and passionate engineer,who is able to <br> accomplis hmultiple task at ease ,without compromising on quality <br>I am looking forward for my first job and wanted to secure a challenging <br> position in a reputable organization  to expand my learning knowledge</p>
                 <div class="title">
                    <p class="title-links active-links" onclick="opentab('skills')">Skills</p>
                    <p class="title-links" onclick="opentab('experience')">Experience</p>
@@ -62,7 +70,8 @@
                         <li><span><br>2006-2018</span><br>SSC<b style="color: white;"> <br>St. Ignatius High School</b></li>
                     </ul>
         </div>
-
+        </div>
+    </div>
     </div>
     </div>
     
@@ -82,13 +91,13 @@
                 <div class="overwrite">
                 <h3>Job Profile App</h3>
                 <p>It is a social media app for jobs</p>
-                <a href="https://omharwankar.github.io/jobex/" target="_blank"><i class="fa fa-external-link"></i></a>
+                <a href="../jobex/jobex.html" target="_blank"><i class="fa fa-external-link"></i></a>
 
-                
+              
                 </div>
+                
             </div>
-            
-        
+         
         </div>
     </div>
     <div id="contact">
@@ -98,44 +107,41 @@
                     <h1 class="subtitle">Contact Me</h1>
                     <p>omhrvnkr@gmail.com</p>
                     <p>Mob.no.:8291030795</p>
-                    <!-- <div class="socialicon">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div> -->
+                    <div class="icon">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-pinterest"></i>
+                    </div>
                     <a href="OM cv.pdf" download="" class="download">Download CV</a>
                    
 
                 </div>
                 <div class="contactright">
-                    <form>
+                    <form  name="myform" onsubmit="return validation()" action="https://formsubmit.co/omhrvnkr@gmail.com" method="POST" target="_blank">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="submitbut">submit</button>
                     </form>
+                    
+                    <p class="top">scrollToTop</p>
+                    <button class="upicon" onclick="scrollToTop()">
+                        <i class="fa fa-arrow-up"></i>
+                    </button>
                 </div>
             </div>
         </div>
         <div class="copyright">
             <p>Copyright &copy Om.</p>
         </div>
+        
     </div>
-    <script>
+</div>
 
-        var tablinks = document.getElementsByClassName("active-links");
-        var tabcontents = document.getElementsByClassName("content");
+    <script src="main.js">
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-links");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-content");
-            }
-            event.currentTarget.classList.add("active-links")
-            document.getElementById(tabname).classList.add("active-content")
-        }   
+       
     </script>
 </body>
 </html>
