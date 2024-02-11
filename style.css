@@ -1,17 +1,18 @@
 body {
     background-color:rgb(0, 0, 0);
     color: aliceblue;
-    
+    /* width: 100%; */
 }
 
 #bgimg {
 
-    background-image: url("imagesport/backgrndimg.jpg");
-    background-position: right;
-    background-position:bottom right;
+    background-image: url("./imagesport/bgimg.png");
+    background-position: center;
+    /* background-position-x: right; */
+    right: 0;
     
     
-    background-size: 30%;
+    background-size: 60%;
     width: 100vw;
     height: 100vh;
 
@@ -75,7 +76,18 @@ nav ul li a:hover::after {
     margin-top: 20%;
     margin-left: 15%;
     font-size: 20px;
+    overflow:hidden;
+  white-space: nowrap;
+  width: 0px;
+  animation:typing;
+  animation-duration: 6s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
 }
+@keyframes typing {
+    from { width:0 }
+    to { width: 100% }
+  }
 
 .main-text h1 span{
     font-size: 70px;
@@ -88,7 +100,7 @@ nav ul li a:hover::after {
 }
 
 img {
-    width: 350px;
+    width: 100%;
     border-radius: 15px;
 }
 
@@ -237,13 +249,12 @@ transform: scale(1.1);
     
     
 }
-/* .socialicon a{
+.icon{
     color: red;
-    background-color: white;
-    text-decoration: none;
-    width: 60px;
-    height: 60px;
-} */
+   padding-bottom: 10px;
+   background-color: black;
+   border-radius: 50%;
+}
 .subtitle{
     margin-left: -350px;
     text-align: center;
@@ -298,3 +309,416 @@ form input,form textarea{
 .copyright{
     text-align: center;
 }
+
+@keyframes colorchange{
+    100%{background-color: #262626;}
+}
+.upicon{
+    color: black;
+    width: 5%;
+    height: 8%;
+   /* padding-bottom: 10px; */
+   background-color:red;
+   border-radius: 60%;
+   height: 30px;
+   margin-left: 800px ;
+   animation-direction: alternate-reverse;
+   animation-fill-mode: both;
+    animation-name: colorchange;
+   animation-duration:1s;
+   animation-iteration-count: infinite;
+
+}
+.top{background: red;
+    margin-left: 780px;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
+     animation-name: colorchange;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    margin-top: 0px;
+
+}
+
+
+/*responsive*/
+#fas{
+    display: none;
+}
+#fa{
+    display: none;
+}
+@media screen and (max-width:600px){
+ #bgimg{
+        /* background-image: url(./imagesport/mobbg.png); */
+
+
+        /* background-repeat: repeat; */
+         background-position:center ; 
+         background-size: 300px;
+        /* padding-bottom: 100px;  */
+        /* top: 10px; */
+        /* bottom: 500px; */
+        /* right: 50px; */
+        
+       /* font-size: small; */
+
+    }  
+    .container {
+        padding: 10px 2%;
+    }
+ 
+    #home{
+        padding-bottom: 500px;
+    }
+    .main-text{
+       
+        overflow:visible;
+        top: 1px;
+        /* margin-left: 15%; */
+        font-size: 20px;
+    }
+    .main-text h1 span{
+        font-size: 40px;
+        color: red;
+        font-family:'Times New Roman', Times, serif;
+        
+    } 
+
+    
+    #fas{
+        display: block;
+        font-size: 25px;
+        color: red;
+    }
+    #fa{
+        display: block;
+        font-size: 25px;
+        color: red;
+    }
+    nav ul{
+        
+        background:white;
+        position: fixed;
+        top: 0;
+        /* right: -400px; */
+        /* width: 300px; */
+        height: 100vh;
+        padding-top:50px ;
+        z-index: 2;
+        width: 50%;
+        right: -200px;
+        
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul #fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        
+    }
+    nav  #fa{
+        position: absolute;
+        top: 25px;
+        left: 1500px;
+        cursor: pointer;
+    }
+
+    .main-text {
+        margin-top: 150%;
+        margin-left: 10%;
+        font-size: 18px;
+    }
+
+    .main-text h1 span {
+        font-size: 30px;
+    }
+
+    .work img {
+        width: 100%;
+        left: 10px;
+    }
+
+    .overwrite {
+        width: 100%;
+        height: 0;
+    }
+
+    .download {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .contactright form {
+        width: 100%;
+        margin-top: 20px;
+        margin-left:50px;
+        margin-bottom: 300px;
+    }
+
+    .upicon {
+        margin-left: 60%;
+    }
+
+    .top {
+        margin-left: 87%;
+    }
+
+    nav ul {
+        width: 50%;
+        right: -200px;
+    }
+
+    nav #fa {
+        left: 400px;
+    }
+    #home p{
+        margin-top: -250px;
+    }
+    .row{
+        margin-top: 80px;
+    }
+    .subt{
+        margin-top: -500px;
+    }
+    .contactleft{
+        margin-top: 0px;
+        margin-left:  25px;
+    }
+    .work{
+        margin-left: 100px;
+        line-height: 5px;
+        position: relative;
+        /* margin-top: 300px; */
+    }
+    .overwrite a{
+        margin-top: 0px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 60px;
+        background-color: rgb(245, 5, 5);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        position: absolute;
+        margin-left: 15px;
+        
+        
+        
+    }
+    .work:hover img{
+        transform: scale(0.95);
+        }
+ 
+        .work:hover .overwrite{
+            height: 105%;
+            width: 105%;
+        }
+        .subt{
+            text-align: center;
+            margin-top: 150px;
+            margin-left: 90px;
+        }
+        .subtitle {
+            margin-left: -40px;
+            /* text-align: center; */
+            margin-top: 150px;
+            display: inline;
+        }
+        .contactleft p{
+            /* margin-top: 50px; */
+            margin-left:  -30px;
+        }
+        .icon{
+            margin-left: -28px;
+        }
+        .contactleft a {
+            margin-left: -28px;
+        }
+        .form button{
+            margin-left: 10px;
+        }
+        .submitbut{
+            border: 1px solid black;
+            text-decoration: none;
+            background-color: red;
+            color: black;
+            padding: 6px;
+            margin-left: 180px;
+            cursor: pointer;
+            margin-bottom: 100px;
+        }
+        form input,form textarea{
+            width: 80%;
+            border: 0;
+            outline: none;
+            background: #262626;
+            padding: 15px;
+            margin: 15px 0;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            
+        }
+       
+        .top{background: red;
+            margin-left: 380px;
+           width: 20%;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: both;
+             animation-name: colorchange;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            margin-top: -400px;
+        
+        }
+       
+        .copyright{
+            margin-top: -300px;
+            margin-left: 120px;
+            margin-bottom: 400px;
+        }
+        .upicon i{
+            margin-top:300px;
+           
+        }
+       
+        .upicon{
+            margin-top: -70px;
+            /* color: black; */
+            width: 5%;
+            height: 8%;
+          
+           background-color:red;
+           border-radius: 60%;
+           height: 30px;
+           margin-left: 410px ;
+           animation-direction: alternate-reverse;
+           animation-fill-mode: both;
+            animation-name: colorchange;
+           animation-duration:1s;
+           animation-iteration-count: infinite;
+        
+        }
+        
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
+        .subt{
+         margin-left: 190px;
+        }
+        .row{
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;    
+        }
+        .col-me-1{
+         margin-top: 80px;
+         display:flex ;
+         flex-basis: 200px;
+         height: 400px;
+         justify-content: flex-start
+        }
+        .col-me-2 h1{
+         padding-left: 300px;
+        }
+      
+        .abt{
+        margin-left: 30px;
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 500px;
+       
+        }
+       
+        .contactright{
+         margin-bottom: 500px;
+         margin-left: -5px;
+         width: 100%;
+     
+        }
+        .mywork{
+         margin-left: -200px;
+         width: 160%;
+         /* padding-right: -550px; */
+         /* padding-left: 500px; */
+        }
+     
+     .work h3{
+         margin-top: 100px;
+         padding-left: 10px;
+         /* color: red; */
+     }
+     .work p{
+         padding-left: 10px;
+         color:rgb(255, 255, 255);
+         padding-bottom: 200px;
+         /* display:inline; */
+         line-height: 20px;
+         /* color: black; */
+     }
+     .row h1 {
+         margin-left: -90px;
+     }
+     .subtitle {
+        
+         
+         margin-top: 150px;
+     }
+     
+     
+     
+     #fas{
+         display: block;
+         font-size: 25px;
+         color: red;
+     }
+     #fa{
+         display: block;
+         font-size: 25px;
+         color: red;
+     }
+     nav ul{
+         
+         background:white;
+         position: fixed;
+         top: 0;
+         /* right: -400px; */
+         /* width: 300px; */
+         height: 100vh;
+         padding-top:50px ;
+         z-index: 2;
+         /* width: 50%; */
+         /* right: -1050px; */
+         
+     }
+     nav ul li {
+         display: block;
+         margin: 25px;
+     }
+     nav ul #fas{
+         position: absolute;
+         top: 25px;
+         left: 25px;
+         cursor: pointer;
+         
+     }
+     nav  #fa{
+         position: absolute;
+         top: 25px;
+         left: 850px;
+         cursor: pointer;
+     }
+     .copyright{
+         margin-top: -550px;
+         margin-left: 200px;
+     }
+     
+     }
+    
+
